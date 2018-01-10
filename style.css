@@ -1,0 +1,252 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    color: #333;
+    font-size: 1.6rem;
+    background-color: #FAFAFA;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .logo {
+    margin: 1.6rem auto;
+    text-align: center;
+  }
+  
+  a, a:visited {
+    color: #0A9297;
+  }
+
+  .header {
+      color: #61435A;
+      display: flex;
+    padding: 1.2rem 1.4rem;
+    font-style: bold;
+  }
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 1rem;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.container {
+    width: 100%;
+    margin: 1.6rem auto;
+    max-width: 100rem;
+    text-align: center;
+  }
+  
+.left-col {
+    float: left;
+    width:30rem;
+}
+
+
+
+#year1 {
+    display: inline;
+    padding:5px;
+    cursor: pointer;
+}
+
+#year2 {
+    display: inline;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#month {
+    cursor: pointer;
+    align-items: center;
+}
+td{
+    padding: 2rem;
+}
+
+  h1 {
+    text-align: center;
+  }
+  
+  .cal__header button {
+    background: none;
+    border: 0;
+    outline: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+  }
+  
+  .cal button:active {
+    border-radius: 3px;
+    box-shadow: 0 0 0 2px rgba(10, 146, 151, 0.1)
+  }
+  
+  .cal {
+    display: none;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+    border: solid 1px #e7e9ed;
+    z-index: 1;
+  }
+  
+  .cal__header {
+    display: flex;
+    padding: 1.2rem 1.4rem;
+    align-items: center;
+  }
+  
+  .cal__header svg {
+    fill: #0A9297;
+  }
+  
+  .cal__header__label {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .cal__week {
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  
+  .cal__week span {
+    font-size: 1.2rem;
+    max-width: 14.28%;
+    padding: 1.2rem 1.4rem;
+    flex: 0 0 14.28%;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .cal__body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fafafa;
+  }
+  
+  .cal__date {
+    background-color: #fff;
+    display: flex;
+    max-width: 14.28%;
+    flex: 0 0 14.28%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-radius: 4px;
+  }
+  
+  .cal__date--active:hover {
+    cursor: pointer;
+  }
+  
+  .cal__date--today {
+    background-color: #0A9297;
+    color: #fff;
+  }
+  
+  .cal__date--selected {
+    background-color: #F0E9DB;
+    color: #333;
+  }
+  
+  .cal__date--disabled {
+    opacity: 0.5;
+  }
+  
+  .cal__date--disabled:hover {
+    cursor: not-allowed;
+  }
+  
+  .demo-picked {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .demo-picked span {
+    font-weight: bold;
+  }
+
+  switch-field {
+    
+   
+      overflow: hidden;
+  }
+
+  .switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+
+
+.switch-field label {
+ 
+  width: 60px;
+  
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+    cursor: pointer;
+}
+
+.switch-field input:checked + label {
+    color:#C8AE82;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}

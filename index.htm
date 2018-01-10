@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vanilla JS Calendar</title>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+        <div>
+            <input type="text" id="input" data-calendar-label="dd" />
+        </div>
+		
+
+		<div class="cal" id="cal">
+                <span class="close" id="close">&times;</span>
+                <div class="header">
+                        Return Date
+                    </div>
+                    <div class="switch-field">
+                        Show flexible dates
+                        <input type="radio" id="switch_left" name="switch_2" value="yes" checked/>
+      <label for="switch_left">Yes</label>
+      <input type="radio" id="switch_right" name="switch_2" value="no" />
+      <label for="switch_right">No</label>
+                    </div>
+                <div class="left-col">
+                        <div>
+				<p>Year</p>
+                            </div>
+                        <div class="year" id="year" data-calendar-active="active">
+                            
+                            
+                                <p id="year1" class="year1" data-calendar-toggle="previous"></p> 
+                                <p id="year2" class="year2" data-calendar-toggle="next"></p>
+                                
+                            
+                        </div>
+                        <div class="month">
+                                <p>Month</p>
+                                <div id="month"   data-calendar-label="month">
+                                        
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="right-col">
+			<div class="cal__header">
+				Day
+			</div>
+			<div class="cal__week">
+                    <span>Su</span> <span>Mo</span> <span>Tu</span><span>We</span> <span>Th</span> <span>Fr</span> <span>Sa</span> 
+			</div>
+            <div class="cal__body" data-calendar-area="month"></div>
+        </div>
+		</div>
+
+		<p class="demo-picked">
+			Date picked: <span data-calendar-label="picked"></span>
+		</p>
+
+		
+	</div>
+	<script src="cal.js" type="text/javascript"></script>
+	<script>
+		window.addEventListener('load', function () {
+		  y_calendar.init();
+		})
+	</script>
+</body>
+</html>
